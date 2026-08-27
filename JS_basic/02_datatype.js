@@ -5,18 +5,18 @@
 // PRIMITIVE :
 
 // 1. NUMBER :
-          let age = 21;
+          {let age = 21;
           let price = 500;
           
           console.log(age);   // Output : 21
           console.log(typeof age);     // Output : "number"
-
+}
 // 2. String :
-          let name = "Abhi";
+          {let name = "Abhi";
           
           console.log(name);   // Output : Abhi
-          console.log(typeof name);     // Output : "string"
-
+          console.log(typeof name);     // Output : "string"}
+}
 // 3. Boolean :
           isfollow = true;
           
@@ -24,11 +24,11 @@
           console.log(typeof isfollow);     // Output : "boolean"
 
 // 4. Undefined :
-          let x;
+          {let x;
           
           console.log(x);   // Output : Undefined
           console.log(typeof x);     // Output : "undefined"
-
+}
 // 5. Null :
           let age = null;
           
@@ -36,11 +36,11 @@
           console.log(typeof age);     // Output : "object"
 
 // 6. Big INT :
-          let x = BigInt("215627389");
+          {let x = BigInt("215627389");
           
           console.log(x);   // Output : 215627389
           console.log(typeof x);     // Output : "bigint"
-
+}
 // 7. Symbol :
           let x = Symbol("Hello");
           
