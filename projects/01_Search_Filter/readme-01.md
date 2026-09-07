@@ -45,7 +45,7 @@ No external dependencies or package managers (like Node.js or NPM) are required.
 
 1. **Clone or Download the Repository**:
    ```bash
-   git clone https://github.com/your-username/user-cards-search.git
+   git clone https://github.com/abhishekaland29-cpu/JS.git
    cd user-cards-search
    ```
 
