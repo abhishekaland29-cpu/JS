@@ -31,7 +31,7 @@ All you need is a web browser (Google Chrome, Firefox, Safari, Edge, etc.).
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
+   git clone https://github.com/abhishekaland29-cpu/JS.git
    ```
 
 2. **Navigate to the project directory:**
