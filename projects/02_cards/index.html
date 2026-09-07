@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Contact & Modal UI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="dashboard-container">
+
+    <!-- LEFT SIDE: CARDS SECTION -->
+    <div class="cards-wrapper">
+      <div class="side-controls">
+        <button class="icon-btn" id="btn-add-new">+</button>
+        <button id="up-btn" class="icon-btn">&#8593;</button>
+        <button id="down-btn" class="icon-btn">&#8595;</button>
+      </div>
+
+      <!-- Container where dynamic cards will be appended -->
+      <div id="cards-container">
+        <!-- Default Initial Card -->
+        <div class="card-section">
+
+        </div>
+        <div class="color-options">
+            <div class="color-dot color-black"></div>
+            <div class="color-dot color-purple"></div>
+            <div class="color-dot color-brown"></div>
+            <div class="color-dot color-teal"></div>
+          </div>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE: FORM MODAL -->
+    <div class="modal-card">
+      <h2 class="modal-title">New Call</h2>
+
+      <form id="call-form">
+        <div class="form-group">
+          <label class="form-label">Image URL</label>
+          <input type="url" id="image-url" class="form-input" placeholder="https://example.com/photo.jpg" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" id="full-name" class="form-input" placeholder="Enter full name" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Home Town</label>
+          <input type="text" id="home-town" class="form-input" placeholder="Enter home town" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Purpose</label>
+          <input type="text" id="purpose" class="form-input" placeholder="e.g., Quick appointment note" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Category</label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="category" value="Emergency" /> Emergency
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="category" value="Important" /> Important
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="category" value="Urgent" /> Urgent
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="category" value="No Rush" checked /> No Rush
+            </label>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn-create">Create Note</button>
+          <button type="button" class="btn-close" id="btn-reset">Close</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
