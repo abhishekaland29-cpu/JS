@@ -36,7 +36,7 @@ All you need is a web browser (Google Chrome, Firefox, Safari, Edge, etc.).
 
 2. **Navigate to the project directory:**
    ```bash
-   cd YOUR_REPOSITORY_NAME
+   cd JS\projects
    ```
 
 3. **Run the project:**
