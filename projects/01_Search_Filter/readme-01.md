@@ -46,7 +46,7 @@ No external dependencies or package managers (like Node.js or NPM) are required.
 1. **Clone or Download the Repository**:
    ```bash
    git clone https://github.com/abhishekaland29-cpu/JS.git
-   cd user-cards-search
+   cd JS\projects
    ```
 
 2. **Open the Project**:
