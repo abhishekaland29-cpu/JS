@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Notifications</title>
+</head>
+<body>
+    <div class="parent"></div>
+
+    <script>
+        function startToaster(config) {
+            
+            const parent = document.querySelector(".parent");
+
+            parent.style = `position:fixed ; display:flex ; flex-direction : column ; padding:15px ; gap:10px ; align-items:start ; z-index = 9999`;
+
+            Object.assign(parent.style, {
+                right: config.PositionX === "right" ? "10px" : "auto",
+                left: config.PositionX === "right" ? "auto" : "10px",
+                bottom: config.PositionY === "bottom" ? "10px" : "auto",
+                top: config.PositionY === "bottom" ? "auto" : "10px",
+            });
+            
+
+            if (config.theme === "dark") {
+                document.body.style.backgroundColor = "#131313";
+            }
+
+            return function(notification) {
+                let div = document.createElement("div");
+
+                div.style.cssText = `display: inline-block; padding: 12px 20px; border-radius: 6px; font-family: sans-serif;`;
+                
+                if (config.theme === "dark") {
+                    div.style.backgroundColor = "#333";
+                    div.style.color = "#fff";
+                } else {
+                    div.style.backgroundColor = "#e0e0e0";
+                    div.style.color = "#000";
+                }
+
+
+                div.textContent = notification;
+
+                
+                parent.appendChild(div);
+
+                
+                setTimeout(() => {
+                    if (parent.contains(div)) {
+                        parent.removeChild(div);
+                    }
+                }, config.duration * 1000);
+            };
+        }
+
+        let toaster = startToaster({
+            PositionX: "left",
+            PositionY: "top",
+            theme: "dark",
+            duration: 3,
+        });
+
+        toaster("Hello Abhishek");
+
+        setTimeout(() => {
+            toaster("AI is here");
+        }, 2000);
+
+    </script>
+
+</body>
+</html>
